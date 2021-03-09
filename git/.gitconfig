@@ -1,11 +1,11 @@
 [user]
-	name  = Omar Sotillo Franco
-	email = omarsotillofranco@gmail.com
+	name = Lorenz Weiß
+	email = lorenz.weis@gmail.com
 	username = omarsotillofranco
 	signingKey = 53FD0F9BA6D16DC1D318B18F1B31734FD5ABC7A7
 	
 [commit]
-	gpgSign = true
+	template = /Users/lorenz.weiss/.stCommitMsg
 
 [alias]
 	a = add --all
@@ -207,4 +207,14 @@
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
 [gpg]
-	program = gpg
+	program = gpg2
+[rerere]
+	enabled = 1
+[core]
+	excludesfile = /Users/lorenz.weiss/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

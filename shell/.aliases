@@ -1,0 +1,8 @@
+alias ll="ls -la"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+alias pls="sudo"
+alias yarn ci="yarn install --frozen-lockfile"
+alias dk='docker $*'
+alias dkstop='docker stop $(docker ps -a -q)'
+alias dk-c='docker-compose $*'
